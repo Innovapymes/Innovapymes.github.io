@@ -151,6 +151,7 @@
           /* Estilos para la tarjeta de contacto */
       .card {
         max-width: 600px;
+        display: flexbox;
         margin: auto;
         margin-bottom: 20px;
         padding: 25px;
@@ -161,18 +162,21 @@
         /* padding-bottom: 2rem; */
       }
 
-      /* Estilos específicos para dispositivos móviles */
-@media (max-width: 768px) {
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 900px) {
     .card {
         display: flex; /* Oculta la card general en dispositivos móviles */
     }
 
     .card-mobile {
+        display: inline-table;
         background-color: #f5f5f5;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin: 20px; /* Espacio alrededor de la card móvil */
+        margin: 5px auto; /* Centro horizontalmente y agrega margen alrededor de la card móvil */
+        width: 900px;
+        max-width: 1000px; /* Ancho máximo de la card móvil */
     }
 
     .card-mobile h2 {
@@ -185,6 +189,7 @@
         line-height: 1.5;
     }
 }
+
 
 /* Estilos para el formulario de contacto dentro de la tarjeta */
       #contact-form {
@@ -585,7 +590,7 @@
 
 <!-- Sección "Contacto" -->
 <section id="contact">
-  <div class="card">
+  <div class="card card-mobile">
     <h2>Contacto</h2>
     <p>
       Si deseas obtener más información sobre Innovapymes SENA 2023, participar como patrocinador o realizar alguna
