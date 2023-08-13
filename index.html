@@ -11,40 +11,46 @@
   <link rel="shortcut icon" href="Imagenes_innova/logo_sena.png" type="image/x-icon">
 
   <style>
-   /* Estilos para la cuenta regresiva */
-  .countdown-container {
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    main {
+      overflow-x: hidden;
+    }
 
-  .countdown-timer {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-    margin: 20px 0;
-  }
+    /* Estilos para la cuenta regresiva */
+    .countdown-container {
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f4f4f4;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .countdown-label {
-    font-size: 20px;
-    color: #777;
-  }
-  
-    /* Estilos generales */
+    .countdown-timer {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .countdown-label {
+      font-size: 20px;
+      color: #777;
+    }
+
     body {
       font-family: Calibri, Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
       background-color: #ffffff;
+      overflow-x: hidden;
+      /* Evita el desplazamiento horizontal */
     }
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      /* Centra horizontalmente */
       padding: 20px;
     }
 
@@ -391,9 +397,7 @@
       width: 100px;
       display: block;
     }
-  </style>
-  <!-- Estilos para los vídeos de YouTube -->
-  <style>
+
     .video-container {
       display: flex;
       justify-content: center;
@@ -415,29 +419,31 @@
       border-radius: 5px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    
   </style>
- <script>
-  // Función para actualizar la cuenta regresiva
-  function updateCountdown() {
-    var eventDate = new Date("2023-09-28T08:00:00").getTime();
-    var now = new Date().getTime();
-    var timeRemaining = eventDate - now;
+  <script>
+    // Función para actualizar la cuenta regresiva
+    function updateCountdown() {
+      var eventDate = new Date("2023-09-28T08:00:00").getTime();
+      var now = new Date().getTime();
+      var timeRemaining = eventDate - now;
 
-    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+      var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-    var countdownTimer = document.getElementById("countdown-timer");
-    countdownTimer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+      var countdownTimer = document.getElementById("countdown-timer");
+      countdownTimer.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-    setTimeout(updateCountdown, 1000);
-  }
+      setTimeout(updateCountdown, 1000);
+    }
 
-  // Iniciar la cuenta regresiva al cargar la página
-  window.onload = updateCountdown;
-</script>
-  </head>
+    // Iniciar la cuenta regresiva al cargar la página
+    window.onload = updateCountdown;
+  </script>
+</head>
 
 <body>
   <header>
@@ -454,12 +460,12 @@
   <main>
     <!-- Sección "¿Qué es Innovapymes SENA 2023?" -->
 
-      <!-- Cuenta regresiva -->
-      <div class="countdown-container">
-        <p class="countdown-label">El evento comienza en:</p>
-        <div id="countdown-timer" class="countdown-timer"></div>
-      </div>
-    
+    <!-- Cuenta regresiva -->
+    <div class="countdown-container">
+      <p class="countdown-label">El evento comienza en:</p>
+      <div id="countdown-timer" class="countdown-timer"></div>
+    </div>
+
     <section class="active" id="about">
       <!-- Vídeos de YouTube -->
       <div class="video-container">
@@ -480,7 +486,7 @@
       <div class="container">
         <h2>¿Qué es Innovapymes Sena 2023?</h2>
 
-        
+
         <p>
           Innovapymes SENA 2023 es un evento único y disruptivo organizado por
           el Servicio Nacional de Aprendizaje (SENA) con el objetivo de
@@ -525,7 +531,7 @@
         </p>
 
         <div class="vision-mission">
-          <img  src="Imagenes_innova/mision.png" alt="Misión" class="zoomable-image" />
+          <img src="Imagenes_innova/mision.png" alt="Misión" class="zoomable-image" />
           <img src="Imagenes_innova/vision.png" alt="Visión" class="zoomable-image" />
         </div>
       </div>
@@ -538,57 +544,57 @@
           <img src="./Imagenes_innova/Equipo_trabajo.jpg" alt="Equipo de Trabajo" class="team-image" />
         </div>
         <style>
-         .section-heading {
-    text-align: center;
-    margin-bottom: 30px;
-  }
+          .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+          }
 
-  .section-heading h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
+          .section-heading h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+          }
 
-  .section-heading p {
-    font-size: 16px;
-    color: #888;
-  }
+          .section-heading p {
+            font-size: 16px;
+            color: #888;
+          }
 
-  .team-image-container {
-    text-align: center;
-    margin-bottom: 40px;
-  }
+          .team-image-container {
+            text-align: center;
+            margin-bottom: 40px;
+          }
 
-  .team-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  }
+          .team-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          }
 
-  .presenters-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
+          .presenters-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+          }
 
-  .presenter {
-    flex-basis: calc(33.33% - 20px);
-    /* Otros estilos de las presentadoras... */
-  }
+          .presenter {
+            flex-basis: calc(33.33% - 20px);
+            /* Otros estilos de las presentadoras... */
+          }
 
-  .committees-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
+          .committees-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+          }
 
-  .committee {
-    flex-basis: calc(33.33% - 20px);
-    /* Otros estilos de los comités... */
-  }
-</style>
-        
-        <h2>Conócenos - Ponentes</h2>
+          .committee {
+            flex-basis: calc(33.33% - 20px);
+            /* Otros estilos de los comités... */
+          }
+        </style>
+
+        <h2>Nuestros Ponentes</h2>
         <div class="speakers-container">
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/ponente_1.PNG" alt="Ponente 1" class="zoomable-image" />
@@ -642,114 +648,125 @@
               libero natus amet aut eum!
             </p>
           </div>
-          
+
 
           <!-- Agrega más ponentes aquí -->
 
-          
+
         </div>
 
-      
-    <h2>Nuestras Presentadoras</h2>
-    <div class="speakers-container">
-      <div class="presenter card card-mobile">
-        <img src="Imagenes_innova/Presentadora_1.jpg" alt="Ana María Sánchez" class="zoomable-image" />
-        <h3>Ana María Sánchez</h3>
-        <p>Descripción de Ana María Sánchez...</p>
+
+        <h2>Nuestras Presentadoras</h2>
+        <div class="speakers-container">
+          <div class="speaker card card-mobile">
+            <img src="Imagenes_innova/Presentadora_1.jpg" alt="Ana María Sánchez" class="zoomable-image" />
+            <h3>Ana María Sánchez</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem illo numquam ducimus praesentium.
+              Possimus aspernatur est saepe explicabo magni ipsum eaque doloribus iste blanditiis repellat. Ab maiores
+              aliquam totam nesciunt.</p>
+          </div>
+
+          <div class="speaker card card-mobile">
+            <img src="Imagenes_innova/Presentadora_2.jpg" alt="Natalia Ramírez" class="zoomable-image" />
+            <h3>Natalia Ramírez</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis a blanditiis, et totam explicabo
+              incidunt. Temporibus itaque ipsam, reprehenderit accusantium dolorum eligendi vero fuga dolorem, iure
+              natus at, omnis suscipit!</p>
+          </div>
+
+          <div class="speaker card card-mobile">
+            <img src="Imagenes_innova/Presentadora_3.jpg" alt="Nikool Vanessa Giraldo" class="zoomable-image" />
+            <h3>Nikool Vanessa Giraldo</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores blanditiis facere sint, impedit
+              voluptatibus natus temporibus nemo ut ex expedita consequatur quibusdam, magni nisi soluta magnam
+              voluptatum! Nisi, possimus sit!</p>
+          </div>
+
+          <div class="speaker card card-mobile">
+            <img src="Imagenes_innova/Presentadora_4.jpg" alt="Angie Arias Cantor" class="zoomable-image" />
+            <h3>Angie Arias Cantor</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime commodi natus corporis labore! Labore
+              illo optio distinctio, temporibus excepturi nobis quidem earum. Tempore architecto quisquam nisi quidem
+              vero unde....</p>
+          </div>
+
+        </div>
       </div>
+  
+      <h2>Nuestros Comités</h2>
+      <div class=" speakers-container">
+        
+        <div class="speaker card card-mobile">
+          <h3>Comité de Comunicaciones</h3>
+          <p>
+            El Comité de Comunicaciones se enASAcarga de gestionar la difusión
+            de información relevante sobre el evento tanto interna como
+            externamente. Su objetivo es mantener informados a todos los
+            involucrados y al público en general sobre las actividades y
+            logros de Innovapymes SENA 2023.
+          </p>
+          <p>Líder del Comité: Karen Valencia Cordoba</p>
+          <img src="./Imagenes_innova/Comité comunicaciones.JPG" alt="Comité de Comunicaciones"
+            class="zoomable-image" />
+        </div>
 
-      <div class="presenter card card-mobile">
-        <img src="Imagenes_innova/Presentadora_2.jpg" alt="Natalia Ramírez" class="zoomable-image" />
-        <h3>Natalia Ramírez</h3>
-        <p>Descripción de Natalia Ramírez...</p>
+        <div class="speaker card card-mobile">
+          <h3>Comité de Mercadeo</h3>
+          <p>
+            El Comité de Mercadeo se enfoca en la promoción del evento y en
+            atraer a más participantes y patrocinadores. Sus estrategias
+            buscan asegurar una mayor visibilidad de Innovapymes SENA 2023 y
+            maximizar el impacto del evento en la comunidad empresarial.
+          </p>
+          <p>Líder del Comité: Nikool Vanessa Giraldo</p>
+          <img src="./Imagenes_innova/Comité mercadeo.JPG" alt="Comité de Mercadeo" class="zoomable-image" />
+        </div>
+
+        <div class="speaker card card-mobile">
+          <h3>Comité Documental</h3>
+          <p>
+            El Comité Documental se encarga de registrar y archivar cada
+            etapa y detalle del evento. Su labor es fundamental para
+            asegurar un registro completo y ordenado de las actividades de
+            Innovapymes SENA 2023, lo que facilitará futuros análisis y
+            mejoras.
+          </p>
+          <p>Líder del Comité: Rosa Linda Cedeño</p>
+
+          <img src="./Imagenes_innova/Comité documental 2.jpg" alt="Comité Documental" class="zoomable-image" />
+        </div>
+
+        <div class="speaker card card-mobile">
+          <h3>Comité Organizacional</h3>
+          <p>
+            El Comité Organizacional es el encargado de planificar y
+            coordinar todos los aspectos logísticos del evento. Desde la
+            selección del lugar hasta la programación, el Comité
+            Organizacional asegura que cada detalle esté cuidado para que
+            Innovapymes SENA 2023 sea un éxito.
+          </p>
+          <p>Líder del Comité: Maria Luisa Campuzano</p>
+
+          <img src="./Imagenes_innova/Comité organizador.JPG" alt="Comité Organizacional" class="zoomable-image" />
+        </div>
+
+        <div class="speaker card card-mobile">
+          <h3>Comité de Logística</h3>
+          <p>
+            El Comité de Logística se encarga de garantizar que los recursos
+            y materiales necesarios para el desarrollo del evento estén
+            disponibles y en óptimas condiciones. Su labor incluye la
+            gestión de equipos, transporte y otros elementos clave para el
+            funcionamiento de Innovapymes SENA 2023.
+          </p>
+          <p>Líder del Comité: Angie Paulin Arias</p>
+
+          <img src="./Imagenes_innova/Comité Logísitico.JPG" alt="Comité de Logística" class="zoomable-image" />
+        </div>
       </div>
-
-      <div class="presenter card card-mobile">
-        <img src="Imagenes_innova/Presentadora_3.jpg" alt="Nikool Vanessa Giraldo" class="zoomable-image" />
-        <h3>Nikool Vanessa Giraldo</h3>
-        <p>Descripción de Nikool Vanessa Giraldo...</p>
       </div>
-
-      <div class="presenter card card-mobile">
-        <img src="Imagenes_innova/Presentadora_4.jpg" alt="Angie Arias Cantor" class="zoomable-image" />
-        <h3>Angie Arias Cantor</h3>
-        <p>Descripción de Angie Arias Cantor...</p>
-      </div>
-
-    </div>
-  </div>
-
-<h2>Nuestros Comités</h2>
-<div class="committees-container">
-<div class="presenter card card-mobile">
-<h3>Comité de Comunicaciones</h3>
-<p>
-  El Comité de Comunicaciones se enASAcarga de gestionar la difusión
-  de información relevante sobre el evento tanto interna como
-  externamente. Su objetivo es mantener informados a todos los
-  involucrados y al público en general sobre las actividades y
-  logros de Innovapymes SENA 2023.
-</p>
-<p>Líder del Comité: Karen Valencia Cordoba</p>
-<img src="./Imagenes_innova/Comité comunicaciones.JPG" alt="Comité de Comunicaciones" class="zoomable-image" />
-</div>
-
-  <div class="presenter card card-mobile">
-<h3>Comité de Mercadeo</h3>
-<p>
-  El Comité de Mercadeo se enfoca en la promoción del evento y en
-  atraer a más participantes y patrocinadores. Sus estrategias
-  buscan asegurar una mayor visibilidad de Innovapymes SENA 2023 y
-  maximizar el impacto del evento en la comunidad empresarial.
-</p>
-<p>Líder del Comité: Nikool Vanessa Giraldo</p>
-<img src="./Imagenes_innova/Comité mercadeo.JPG" alt="Comité de Mercadeo" class="zoomable-image" />
-</div>
-
-<div class="presenter card card-mobile">
-<h3>Comité Documental</h3>
-<p>
-  El Comité Documental se encarga de registrar y archivar cada
-  etapa y detalle del evento. Su labor es fundamental para
-  asegurar un registro completo y ordenado de las actividades de
-  Innovapymes SENA 2023, lo que facilitará futuros análisis y
-  mejoras.
-</p>
-<p>Líder del Comité: Rosa Linda Cedeño</p>
-
-<img src="./Imagenes_innova/Comité documental 2.jpg" alt="Comité Documental" class="zoomable-image" />
-</div>
-
-<div class="presenter card card-mobile">
-<h3>Comité Organizacional</h3>
-<p>
-  El Comité Organizacional es el encargado de planificar y
-  coordinar todos los aspectos logísticos del evento. Desde la
-  selección del lugar hasta la programación, el Comité
-  Organizacional asegura que cada detalle esté cuidado para que
-  Innovapymes SENA 2023 sea un éxito.
-</p>
-<p>Líder del Comité: Maria Luisa Campuzano</p>
-
-<img src="./Imagenes_innova/Comité organizador.JPG" alt="Comité Organizacional" class="zoomable-image" />
-</div>
-
-<div class="presenter card card-mobile">
-<h3>Comité de Logística</h3>
-<p>
-  El Comité de Logística se encarga de garantizar que los recursos
-  y materiales necesarios para el desarrollo del evento estén
-  disponibles y en óptimas condiciones. Su labor incluye la
-  gestión de equipos, transporte y otros elementos clave para el
-  funcionamiento de Innovapymes SENA 2023.
-</p>
-<p>Líder del Comité: Angie Paulin Arias</p>
-
-<img src="./Imagenes_innova/Comité Logísitico.JPG" alt="Comité de Logística" class="zoomable-image" />
-</div>
-</div>
-</div>
-</section>  
+    
+    </section>
 
 
     <!-- Sección "Contacto" -->
@@ -841,7 +858,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer style="position: sticky;">
     <p>
       Derechos de autor © 2023 Innovapymes SENA. Todos los derechos
       reservados.
