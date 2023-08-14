@@ -448,8 +448,40 @@
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
   }
 
-    
+  #slider-container {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    #slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slider-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #slider-arrows {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #prev-slide,
+    #next-slide {
+        cursor: pointer;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+</style>
   </style>
+  
   <script>
     // Función para actualizar la cuenta regresiva
     function updateCountdown() {
@@ -470,7 +502,11 @@
 
     // Iniciar la cuenta regresiva al cargar la página
     window.onload = updateCountdown;
+
+    
+
   </script>
+
 </head>
 
 <body>
@@ -589,6 +625,46 @@
           Invitamos a las empresas a ser patrocinadoras de Innovapymes SENA 2023. Al patrocinar nuestro evento, obtendrás
           una excelente visibilidad y beneficios exclusivos. ¡Acompáñanos y sé parte de este evento innovador!
         </p>
+
+        <div id="slider-container">
+          <div id="slider">
+              <img src="Imagenes_innova/patrocinio_0.PNG" alt="Imagen 1" class="slider-image">
+              <img src="Imagenes_innova/patrocinio_1.PNG" alt="Imagen 2" class="slider-image">
+              <img src="Imagenes_innova/patrocinio_2.PNG" alt="Imagen 3" class="slider-image">
+              <img src="Imagenes_innova/patrocinio_3.PNG" alt="Imagen 4" class="slider-image">
+      
+          </div>
+          <div id="slider-arrows">
+              <span id="prev-slide">&#10094;</span>
+              <span id="next-slide">&#10095;</span>
+          </div>
+      </div>
+
+      <script>
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName("slider-image");
+    
+        document.getElementById("prev-slide").addEventListener("click", () => {
+            goToSlide(currentSlide - 1);
+        });
+    
+        document.getElementById("next-slide").addEventListener("click", () => {
+            goToSlide(currentSlide + 1);
+        });
+    
+        function goToSlide(n) {
+            slides[currentSlide].style.display = "none";
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].style.display = "block";
+        }
+    
+        function showNextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+    
+        setInterval(showNextSlide, 5000); // Cambiar de imagen cada 10 segundos
+    </script>
+
         <ul>
           <li>Destaque en la promoción del evento.</li>
           <li>Acceso exclusivo a actividades VIP.</li>
@@ -596,21 +672,7 @@
           <li>Publicidad en materiales del evento.</li>
           <li>Y más...</li>
         </ul>
-      </div>
-        <div class="flyer-container">
-          <div class="flyer">
-            <img src="Imagenes_innova/patrocinio_0.PNG" alt="Flyer 1">
-          </div>
-          <div class="flyer">
-            <img src="Imagenes_innova/patrocinio_1.PNG" alt="Flyer 1">
-          </div>
-          <div class="flyer">
-            <img src="Imagenes_innova/patrocinio_2.PNG" alt="Flyer 2">
-          </div>
-          <div class="flyer">
-            <img src="Imagenes_innova/patrocinio_3.PNG" alt="Flyer 3">
-            
-          </div>
+      
       
     </section>
 
@@ -618,6 +680,7 @@
     <section id="speakers">
       <div class="container">
         <div class="team-image-container">
+          <h1>Nuestro Equipo</h1> 
           <img src="./Imagenes_innova/Equipo_trabajo.JPG" alt="Equipo de Trabajo" class="team-image" />
         </div>
         <style>
@@ -872,7 +935,7 @@
 
         <p>
           Puedes comunicarte con nosotros a través del siguiente correo electrónico: info@innovapymes.com o mediante
-          nuestro número de teléfono: +123456789.
+          nuestro número de teléfono: +57 321 7969241
         </p>
         <p>
           ¡Esperamos contar contigo en Innovapymes SENA 2023!
@@ -900,34 +963,29 @@
             <th>Actividad</th>
           </tr>
           <tr>
-            <td>Lunes</td>
-            <td>9:00 - 10:30</td>
+            <td>Lunes, 28 de septiembre</td>
+            <td>8:00 - 8:30</td>
             <td>Sesión de Apertura</td>
           </tr>
           <tr>
-            <td>Lunes</td>
-            <td>11:00 - 13:00</td>
+            <td>Lunes, 28 de septiembre</td>
+            <td>8:30 - 9:30</td>
             <td>Eje Temático 1: Marketing Digital</td>
           </tr>
           <tr>
-            <td>Martes</td>
-            <td>9:00 - 10:30</td>
+            <td>Lunes, 28 de septiembre</td>
+            <td>9:30 - 10:30</td>
             <td>Eje Temático 2: Innovación Empresarial</td>
           </tr>
           <tr>
-            <td>Martes</td>
-            <td>11:00 - 13:00</td>
+            <td>Lunes, 28 de septiembre</td>
+            <td>10:30 - 11:30</td>
             <td>Eje Temático 3: Mejora de la Rentabilidad</td>
           </tr>
           <tr>
-            <td>Miércoles</td>
-            <td>9:00 - 10:30</td>
-            <td>Talleres Prácticos</td>
-          </tr>
-          <tr>
-            <td>Miércoles</td>
-            <td>11:00 - 12:30</td>
-            <td>Clausura y Entrega de Certificados</td>
+            <td>Lunes, 28 de septiembre</td>
+            <td>11:30 - 12:00</td>
+            <td>Sorteos y premios</td>
           </tr>
         </table>
       </div>
