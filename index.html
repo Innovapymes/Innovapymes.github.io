@@ -142,10 +142,11 @@
     .speakers-container,
     .committees-container {
       display: flex;
-      flex-wrap: wrap;
-      /* Cambiamos flex-wrap a wrap para que los comités se muestren en línea */
-      justify-content: space-evenly;
-    }
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px auto; /* Ajusta el margen vertical según lo necesites */
+}
 
     .speaker center {
       display: flex;
@@ -154,17 +155,7 @@
     }
 
     /* Estilos de cada ponente y comité */
-    .speaker,
-    .committee {
-      width: 45%;
-      /* Reducimos el ancho de los elementos para dejar espacio entre ellos */
-      margin: 1%;
-      /* Agregamos un pequeño margen entre los elementos */
-      text-align: justify;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+   
 
     .speaker img,
     .committee img {
@@ -175,19 +166,7 @@
       display: block;
       margin: 0 auto;
     }
-
-    .speaker h3,
-    .committee h3 {
-      margin-top: 10px;
-      font-size: 24px;
-      text-align: center;
-    }
-
-    .speaker p,
-    .committee p {
-      font-size: 2rem;
-      line-height: 1.5;
-    }
+    
 
     .speaker,
     .presenter {
@@ -209,18 +188,13 @@
       margin: 0 auto;
     }
 
-    .speaker h3,
-    .presenter h3 {
-      margin-top: 10px;
-      font-size: 24px;
-      text-align: center;
-    }
-
+    
     .speaker p,
     .presenter p {
-      font-size: 1.5rem;
+      font-size: 1.5rem;  
       line-height: 1.3;
     }
+   
 
     /* Estilos para la tarjeta de contacto */
     .card {
@@ -306,10 +280,6 @@
       }
     }
 
-
-
-
-
     /* Estilos para el formulario de contacto dentro de la tarjeta */
     #contact-form {
       max-width: 100%;
@@ -354,8 +324,6 @@
     #contact-form button[type="submit"]:hover {
       background-color: #347c00;
     }
-
-
 
 
     /* Estilos para la sección "¿Qué es Innovapymes SENA 2023?" */
@@ -479,7 +447,80 @@
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.5);
     }
-</style>
+    .custom-heading {
+  text-align: center;
+  background-color: #39A900;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 28px;
+}
+
+          .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+          }
+
+          .section-heading h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+          }
+
+          .section-heading p {
+            font-size: 16px;
+            color: #888;
+          }
+          
+
+          .team-image-container {
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          .shifted-image-center {
+  margin: 0 auto; /* Centra horizontalmente dentro del contenedor */
+  max-width: 70%;
+}
+
+          .team-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          .presenters-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+          }
+
+          .presenter {
+            flex-basis: calc(33.33% - 20px);
+            /* Otros estilos de las presentadoras... */
+          }
+
+          .committees-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+          }
+
+          .committee {
+            flex-basis: calc(33.33% - 20px);
+            /* Otros estilos de los comités... */
+          }
+          .paragraph-blank {
+            background-color: white;
+            color: white;
+  line-height: 1.6; /* Ajusta este valor para cambiar el espaciado */
+}
+
+.registration-link {
+  font-size: 30px;
+  color: #39A900;
+}
+      
   </style>
   
   <script>
@@ -549,10 +590,10 @@
       </div>
 
       <div class="container">
-        <h2>¿Qué es Innovapymes Sena 2023?</h2>
+        <h1 style="text-align: center; margin-top: 20px; font-size: 30px; background-color: #39A900; color: white; padding: 10px; border-radius: 10px;">¿Qué es InnovaPymes SENA?</h1> 
 
 
-        <p>
+        <p style="font-size: 20px;">
           Innovapymes SENA 2023 es un evento único y disruptivo organizado por
           el Servicio Nacional de Aprendizaje (SENA) con el objetivo de
           capacitar a los participantes de las empresas vinculadas al SENA en
@@ -560,7 +601,7 @@
           Este evento brinda una oportunidad excepcional para su empresa de
           ser parte activa de esta experiencia de aprendizaje y desarrollo.
         </p>
-        <p>
+        <p style="font-size: 20px;">
           Durante el evento, los participantes tendrán la oportunidad de
           acceder a valiosos conocimientos y herramientas relacionados con
           Marketing Digital, Innovación Empresarial y Mejora de la
@@ -572,9 +613,22 @@
           <img src="Imagenes_innova/flyer_1.jpg" alt="Imagen 1" class="zoomable-image" />
           <img src="Imagenes_innova/flyer_2.png" alt="Imagen 2" class="zoomable-image" />
         </div>
-
-        <h2 style="text-align: left; width: 2000px">Misión y Visión</h2>
-        <p>
+        <p class="paragraph-blank">
+          nenenenenenennenenenene
+          nenenenennenenenenenenne
+          
+        
+        
+        </p>
+        <p class="paragraph-blank">
+          nenenenenenennenenenene
+          nenenenennenenenenenenne
+          
+        
+        
+        </p>
+        <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color: #39A900; color: white; padding: 10px; border-radius: 10px;">Nuestra Misión y Visión</h1> 
+        <p style="font-size: 20px;">
           En un mundo empresarial en constante evolución, reconocemos la
           importancia de mantenernos a la vanguardia en temas cruciales como
           el Marketing Digital, la Innovación Empresarial y la Mejora de la
@@ -583,13 +637,13 @@
           y experiencias para ayudarte a enfrentar los desafíos actuales y
           futuros.
         </p>
-        <p>
+        <p style="font-size: 20px;">
           Te invitamos a ser parte activa de esta experiencia de aprendizaje y
           desarrollo. Juntos, forjaremos un camino hacia la excelencia
           empresarial y contribuiremos al desarrollo económico y social de
           nuestro país.
         </p>
-        <p>
+        <p style="font-size: 20px;">
           Sin más preámbulos, te presentamos nuestra Misión y Visión, pilares
           fundamentales que guían nuestra labor y compromiso con el
           crecimiento sostenible de las empresas y la sociedad en general.
@@ -605,23 +659,26 @@
      <!-- Sección "Se parte de nosotros" -->
     <section id="join-us">
       <div class="container">
-        <h2>Se parte de nosotros</h2>
-        <p>
+        <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color: #39A900; color: white; padding: 10px; border-radius: 10px;">¡Haz parte de nosotros!</h1> 
+        <p style="font-size: 20px;">
           ¡Te invitamos a formar parte de Innovapymes SENA 2023! Regístrate en nuestro evento para acceder a
           oportunidades únicas de aprendizaje, crecimiento empresarial e innovación. Asiste y descubre cómo puedes
           beneficiarte de las valiosas conferencias y talleres que hemos preparado para ti.
         </p>
-        <p>
+        <p style="font-size: 20px;">
           ¿Por qué deberías asistir a nuestro evento? Innovapymes SENA 2023 te brindará herramientas esenciales para
           impulsar tu negocio, estrategias de marketing digital, conocimientos en innovación empresarial y claves para
           mejorar la rentabilidad. ¡No te pierdas esta oportunidad!
         </p>
-        <a href="https://forms.gle/VdixxMmgPyu2VLfR7">Regístrate aquí</a>
+        <a href="https://forms.gle/VdixxMmgPyu2VLfR7" class="registration-link">Regístrate aquí</a>
+      </div>
+      <div class="image-container">
+        <img src="Imagenes_innova/señalar_arriba.png" alt="Imagen con desplazamiento" class="centered-image shifted-image-center">
       </div>
 
       <div class="container">
-        <h2>Conviértete en Patrocinador</h2>
-        <p>
+        <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color:  #39A900; color: white; padding: 10px; border-radius: 10px;">¡Conviertete en patrocinador!</h1> 
+        <p style="font-size: 20px;">
           Invitamos a las empresas a ser patrocinadoras de Innovapymes SENA 2023. Al patrocinar nuestro evento, obtendrás
           una excelente visibilidad y beneficios exclusivos. ¡Acompáñanos y sé parte de este evento innovador!
         </p>
@@ -664,13 +721,21 @@
     
         setInterval(showNextSlide, 5000); // Cambiar de imagen cada 10 segundos
     </script>
+<p class="paragraph-blank">
+  nenenenenenennenenenene
+  nenenenennenenenenenenne
+  
 
+
+</p>
+<p style="font-size: 20px;">Tenemos muchos beneficios para ti, no dudes en comunicarte con nosotros para que no te pierdas estos beneficios:</p>
+   
         <ul>
-          <li>Destaque en la promoción del evento.</li>
-          <li>Acceso exclusivo a actividades VIP.</li>
-          <li>Networking con otros líderes empresariales.</li>
-          <li>Publicidad en materiales del evento.</li>
-          <li>Y más...</li>
+          <li style="font-size: 20px;">Destaque en la promoción del evento.</li>
+          <li style="font-size: 20px;">Acceso exclusivo a actividades VIP.</li>
+          <li style="font-size: 20px;">Networking con otros líderes empresariales.</li>
+          <li style="font-size: 20px;">Publicidad en materiales del evento.</li>
+          <li style="font-size: 20px;">Y más...</li>
         </ul>
       
       
@@ -680,67 +745,32 @@
     <section id="speakers">
       <div class="container">
         <div class="team-image-container">
-          <h1>Nuestro Equipo</h1> 
+          <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color: #8c9786; color: white; padding: 10px; border-radius: 10px;">Nuestro Equipo de Trabajo</h1> 
           <img src="./Imagenes_innova/Equipo_trabajo.JPG" alt="Equipo de Trabajo" class="team-image" />
+          <p>Sin nuestro equipo de trabajo nada de esto sería posible, es por ello que agradecemos el gran trabajo que hemos logrado.</p>
+          <p class="paragraph-blank">
+            nenenenenenennenenenene
+            nenenenennenenenenenenne
+            
+      
+      
+          </p>
+          <p class="paragraph-blank">
+            nenenenenenennenenenene
+            nenenenennenenenenenenne
+            
+      
+      
+          </p>
         </div>
-        <style>
-          .section-heading {
-            text-align: center;
-            margin-bottom: 30px;
-          }
-
-          .section-heading h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-          }
-
-          .section-heading p {
-            font-size: 16px;
-            color: #888;
-          }
-
-          .team-image-container {
-            text-align: center;
-            margin-bottom: 40px;
-          }
-
-          .team-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-          }
-
-          .presenters-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-          }
-
-          .presenter {
-            flex-basis: calc(33.33% - 20px);
-            /* Otros estilos de las presentadoras... */
-          }
-
-          .committees-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-          }
-
-          .committee {
-            flex-basis: calc(33.33% - 20px);
-            /* Otros estilos de los comités... */
-          }
-        </style>
-
-        <h2>Nuestros Ponentes</h2>
+      
+        <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color: #39A900; color: white; padding: 10px; border-radius: 10px;">Nuestros Ponentes</h1> 
         <div class="speakers-container">
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/ponente_1.PNG" alt="Ponente 1" class="zoomable-image" />
+            
             <h3>Juan Fernando Correa</h3>
-            <p>
-              Profesional en Negocios Internacionales con amplia experiencia
+            <p style="font-size: 20px;">Profesional en Negocios Internacionales con amplia experiencia
               docente y en el campo profesional, presentará una ponencia
               inspiradora sobre Innovación Empresarial. Con una Maestría en
               Administración y otra en Finanzas en proceso, y candidato a
@@ -756,7 +786,7 @@
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/ponente_2.png" alt="Ponente 2" class="zoomable-image" />
             <h3>Wilman Cuellar</h3>
-            <p>
+            <p style="font-size: 20px;">
               Conferencista y coach especializado en ventas, PNL, coaching y
               marketing digital, presentará una ponencia inspiradora sobre
               estrategias efectivas de Marketing Digital. Con amplia formación
@@ -780,7 +810,7 @@
 
             <img src="Imagenes_innova/ponente_3.jpg" alt="Ponente 3" class="zoomable-image" />
             <h3>Fabio Aldemar Obando</h3>
-            <p>
+            <p style="font-size: 20px;">
               Dará la ponencia de Rentabilidad Empresarial. Lorem ipsum dolor
               sit amet consectetur adipisicing elit. Distinctio molestiae,
               aliquam officia doloremque odit, deleniti dolore nulla assumenda
@@ -796,8 +826,8 @@
         </div>
 
 
-        <h2>Nuestras Presentadoras</h2>
-        <p>En conjunto, Ana, Natalia, Nikool y Angie conforman un equipo de presentadoras 
+        <h1 style="text-align: center; margin-top: 20px; font-size: 28px; background-color: #39A900; color: white; padding: 10px; border-radius: 10px;">Nuestras Presentadoras</h1> 
+        <p style="font-size: 20px;">En conjunto, Ana, Natalia, Nikool y Angie conforman un equipo de presentadoras 
           diverso y talentoso que seguramente dejará una impresión duradera en el evento 
           empresarial. Cada una aporta sus propias cualidades únicas que enriquecerán la 
           experiencia de los asistentes y contribuirán al éxito del evento.</p>
@@ -805,57 +835,56 @@
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_1.jpg" alt="Ana María Sánchez" class="zoomable-image" />
             <h3>Ana María Sánchez</h3>
-            <p>Ana es una presentadora excepcionalmente alegre y enérgica. Su entusiasmo es contagioso y logra mantener un ambiente positivo en cualquier evento. Su inteligencia y conocimiento profundo sobre diversos temas la convierten en una oradora versátil y cautivadora. Además, su habilidad para transmitir información de manera amena y su capacidad para improvisar la convierten en una figura querida en cualquier evento empresarial.</p>
+            <p style="font-size: 20px;">Ana es una presentadora excepcionalmente alegre y enérgica. Su entusiasmo es contagioso y logra mantener un ambiente positivo en cualquier evento. Su inteligencia y conocimiento profundo sobre diversos temas la convierten en una oradora versátil y cautivadora. Además, su habilidad para transmitir información de manera amena y su capacidad para improvisar la convierten en una figura querida en cualquier evento empresarial.</p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_2.JPG" alt="Natalia Ramírez" class="zoomable-image" />
             <h3>Natalia Gaviría</h3>
-            <p>Natalia se destaca por su amabilidad y su habilidad para crear un ambiente cálido y acogedor en todos los eventos en los que participa. Su trato cercano y respetuoso hace que los asistentes se sientan valorados y escuchados. Natalia también es una presentadora segura y firme. Su estilo comunicativo claro y estructurado la convierte en una excelente comunicadora, capaz de transmitir información de manera efectiva y comprensible para todos.                                   
+            <p style="font-size: 20px;">Natalia se destaca por su amabilidad y su habilidad para crear un ambiente cálido y acogedor en todos los eventos en los que participa. Su trato cercano y respetuoso hace que los asistentes se sientan valorados y escuchados. También es una presentadora segura y firme. Su estilo comunicativo claro y estructurado la convierte en una excelente comunicadora, capaz de transmitir información de manera efectiva y comprensible para todos.                                   
             </p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_3.JPG" alt="Nikool Vanessa Giraldo" class="zoomable-image" />
             <h3>Nikool Vanessa Giraldo</h3>
-            <p>Nikool posee una energía única que irradia confianza y carisma en el escenario. Su presencia magnética capta la atención de la audiencia desde el primer momento. Además, su pasión por la temática del evento es palpable, lo que la convierte en una experta en mantener a la audiencia cautivada. Aunque es dinámica y enérgica, Nikool también muestra una habilidad excepcional para escuchar y comprender las perspectivas de los demás, lo que la convierte en una presentadora empática y comprometida.</p>
+            <p style="font-size: 20px;">Nikool posee una energía única que irradia confianza y carisma en el escenario. Su presencia magnética capta la atención de la audiencia desde el primer momento. Su pasión por la temática del evento es palpable, lo que la convierte en una experta en mantener a la audiencia cautivada. Nikool también muestra una habilidad excepcional para escuchar y comprender las perspectivas de los demás, lo que la convierte en una presentadora empática y comprometida.</p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_4.JPG" alt="Angie Arias Cantor" class="zoomable-image" />
             <h3>Angie Arias Cantor</h3>
-            <p>Angie se caracteriza por su creatividad y su enfoque innovador en la presentación de contenidos. Siempre está dispuesta a pensar fuera de la caja y a ofrecer perspectivas frescas sobre los temas tratados en el evento. Su habilidad para abordar temas complejos de manera accesible la convierte en una comunicadora efectiva. Aunque es creativa, Angie también demuestra seriedad y profesionalismo en su enfoque, lo que brinda un equilibrio único a su estilo de presentación.
+            <p style="font-size: 20px;">Angie se caracteriza por su creatividad y su enfoque innovador en la presentación de contenidos. Siempre está dispuesta a pensar fuera de la caja y a ofrecer perspectivas frescas sobre los temas tratados en el evento. Su habilidad para abordar temas complejos de manera accesible la convierte en una comunicadora efectiva. Aunque es creativa, Angie también demuestra seriedad y profesionalismo en su enfoque, lo que brinda un equilibrio único a su estilo de presentación.
 
             </p>
+            
           </div>
-
         </div>
-      </div>
-  
-      <h2>Nuestros Comités</h2>
-      <div class=" speakers-container">
+          <h1 style="text-align: center; background-color: #39A900; color: white; padding: 10px; border-radius: 10px; margin: 0; font-size: 28px;">Nuestros Comités</h1> 
+          <div class="speakers-container">
         
         <div class="speaker card card-mobile">
           <h3>Comité de Comunicaciones</h3>
-          <p>
-            El Comité de Comunicaciones se enASAcarga de gestionar la difusión
-            de información relevante sobre el evento tanto interna como
-            externamente. Su objetivo es mantener informados a todos los
-            involucrados y al público en general sobre las actividades y
-            logros de Innovapymes SENA 2023.
+          <p style="font-size: 20px;">
+              El Comité de Comunicaciones se encarga de gestionar la difusión
+              de información relevante sobre el evento tanto interna como
+              externamente. Su objetivo es mantener informados a todos los
+              involucrados y al público en general sobre las actividades y
+              logros de Innovapymes SENA 2023.
           </p>
           <p>Líder del Comité: Karen Valencia Cordoba</p>
+    
           <img src="./Imagenes_innova/Comité comunicaciones.JPG" alt="Comité de Comunicaciones"
             class="zoomable-image" />
         </div>
 
         <div class="speaker card card-mobile">
           <h3>Comité de Mercadeo</h3>
-          <p>
+          <p style="font-size: 20px;">
             El Comité de Mercadeo se enfoca en la promoción del evento y en
             atraer a más participantes y patrocinadores. Sus estrategias
             buscan asegurar una mayor visibilidad de Innovapymes SENA 2023 y
-            maximizar el impacto del evento en la comunidad empresarial.
+            maximizar el impacto del evento en la comunidad empresarial y educativa.
           </p>
           <p>Líder del Comité: Nikool Vanessa Giraldo</p>
           <img src="./Imagenes_innova/Comité mercadeo.JPG" alt="Comité de Mercadeo" class="zoomable-image" />
@@ -863,12 +892,12 @@
 
         <div class="speaker card card-mobile">
           <h3>Comité Documental</h3>
-          <p>
+          <p style="font-size: 20px;">
             El Comité Documental se encarga de registrar y archivar cada
             etapa y detalle del evento. Su labor es fundamental para
             asegurar un registro completo y ordenado de las actividades de
             Innovapymes SENA 2023, lo que facilitará futuros análisis y
-            mejoras.
+            mejoras. Además, se encargará de realizar las certificaciones del evento.
           </p>
           <p>Líder del Comité: Rosa Linda Cedeño</p>
 
@@ -877,12 +906,12 @@
 
         <div class="speaker card card-mobile">
           <h3>Comité Organizacional</h3>
-          <p>
+          <p style="font-size: 20px;">
             El Comité Organizacional es el encargado de planificar y
-            coordinar todos los aspectos logísticos del evento. Desde la
+            coordinar todos los aspectos logísticos que requieran un orden en el evento. Desde la
             selección del lugar hasta la programación, el Comité
             Organizacional asegura que cada detalle esté cuidado para que
-            Innovapymes SENA 2023 sea un éxito.
+            Innovapymes SENA 2023 sea un éxito y los participantes disfruten del evento.
           </p>
           <p>Líder del Comité: Maria Luisa Campuzano</p>
 
@@ -891,7 +920,7 @@
 
         <div class="speaker card card-mobile">
           <h3>Comité de Logística</h3>
-          <p>
+          <p style="font-size: 20px;">
             El Comité de Logística se encarga de garantizar que los recursos
             y materiales necesarios para el desarrollo del evento estén
             disponibles y en óptimas condiciones. Su labor incluye la
@@ -904,7 +933,8 @@
         </div>
       </div>
       </div>
-    
+    </div>
+        
     </section>
 
 
@@ -912,7 +942,7 @@
     <section id="contact">
       <div class="form-card">
         <h2>Contacto</h2>
-        <p>
+        <p style="font-size: 20px;">
           Si deseas obtener más información sobre Innovapymes SENA 2023, participar como patrocinador o realizar alguna
           consulta, no dudes en contactarnos. Estamos disponibles para responder tus preguntas y brindarte toda la
           asesoría que necesites.
@@ -933,11 +963,11 @@
         </form>
 
 
-        <p>
+        <p style="font-size: 20px;">
           Puedes comunicarte con nosotros a través del siguiente correo electrónico: info@innovapymes.com o mediante
           nuestro número de teléfono: +57 321 7969241
         </p>
-        <p>
+        <p style="font-size: 20px;">
           ¡Esperamos contar contigo en Innovapymes SENA 2023!
         </p>
       </div>
@@ -949,7 +979,7 @@
     <section id="schedule">
       <div class="container ">
         <h2>Programa</h2>
-        <p>
+        <p style="font-size: 20px;">
           A continuación, te presentamos el programa preliminar de Innovapymes
           SENA 2023. Ten en cuenta que este programa puede estar sujeto a
           cambios y actualizaciones. Te invitamos a mantenerte informado a
