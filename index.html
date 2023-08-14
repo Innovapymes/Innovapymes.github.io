@@ -420,6 +420,34 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
+    .flyer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .flyers {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .flyer {
+    flex: 0 0 300px; /* Ajusta el ancho del flyer */
+    margin: 0 10px; /* Espacio entre flyers */
+  }
+  .flyer img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px; /* Márgenes alrededor de la imagen */
+    border: 5px solid rgb(60, 196, 26); /* Agregar un borde negro alrededor de la imagen */
+    vertical-align: middle;
+  }
+  .flyers:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+  }
+
     
   </style>
   <script>
@@ -453,7 +481,8 @@
 
   <nav>
     <a href="#" onclick="showSection('about')">¿Qué es Innovapymes Sena 2023?</a>
-    <a href="#" onclick="showSection('speakers')">Conócenos (Ponentes y Comités)</a>
+    <a href="#" onclick="showSection('join-us')">¡Se parte de nosotros!</a>
+    <a href="#" onclick="showSection('speakers')">Conócenos</a>
     <a href="#" onclick="showSection('contact')">Contacto</a>
     <a href="#" onclick="showSection('schedule')">Programa</a>
   </nav>
@@ -535,6 +564,54 @@
           <img src="Imagenes_innova/vision.png" alt="Visión" class="zoomable-image" />
         </div>
       </div>
+    </section>
+
+     <!-- Sección "Se parte de nosotros" -->
+    <section id="join-us">
+      <div class="container">
+        <h2>Se parte de nosotros</h2>
+        <p>
+          ¡Te invitamos a formar parte de Innovapymes SENA 2023! Regístrate en nuestro evento para acceder a
+          oportunidades únicas de aprendizaje, crecimiento empresarial e innovación. Asiste y descubre cómo puedes
+          beneficiarte de las valiosas conferencias y talleres que hemos preparado para ti.
+        </p>
+        <p>
+          ¿Por qué deberías asistir a nuestro evento? Innovapymes SENA 2023 te brindará herramientas esenciales para
+          impulsar tu negocio, estrategias de marketing digital, conocimientos en innovación empresarial y claves para
+          mejorar la rentabilidad. ¡No te pierdas esta oportunidad!
+        </p>
+        <a href="https://forms.gle/VdixxMmgPyu2VLfR7">Regístrate aquí</a>
+      </div>
+
+      <div class="container">
+        <h2>Conviértete en Patrocinador</h2>
+        <p>
+          Invitamos a las empresas a ser patrocinadoras de Innovapymes SENA 2023. Al patrocinar nuestro evento, obtendrás
+          una excelente visibilidad y beneficios exclusivos. ¡Acompáñanos y sé parte de este evento innovador!
+        </p>
+        <ul>
+          <li>Destaque en la promoción del evento.</li>
+          <li>Acceso exclusivo a actividades VIP.</li>
+          <li>Networking con otros líderes empresariales.</li>
+          <li>Publicidad en materiales del evento.</li>
+          <li>Y más...</li>
+        </ul>
+      </div>
+        <div class="flyer-container">
+          <div class="flyer">
+            <img src="Imagenes_innova/patrocinio_0.PNG" alt="Flyer 1">
+          </div>
+          <div class="flyer">
+            <img src="Imagenes_innova/patrocinio_1.PNG" alt="Flyer 1">
+          </div>
+          <div class="flyer">
+            <img src="Imagenes_innova/patrocinio_2.PNG" alt="Flyer 2">
+          </div>
+          <div class="flyer">
+            <img src="Imagenes_innova/patrocinio_3.PNG" alt="Flyer 3">
+            
+          </div>
+      
     </section>
 
     <!-- Sección "Conócenos - Ponentes y Comités" -->
@@ -657,37 +734,36 @@
 
 
         <h2>Nuestras Presentadoras</h2>
+        <p>En conjunto, Ana, Natalia, Nikool y Angie conforman un equipo de presentadoras 
+          diverso y talentoso que seguramente dejará una impresión duradera en el evento 
+          empresarial. Cada una aporta sus propias cualidades únicas que enriquecerán la 
+          experiencia de los asistentes y contribuirán al éxito del evento.</p>
         <div class="speakers-container">
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_1.jpg" alt="Ana María Sánchez" class="zoomable-image" />
             <h3>Ana María Sánchez</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem illo numquam ducimus praesentium.
-              Possimus aspernatur est saepe explicabo magni ipsum eaque doloribus iste blanditiis repellat. Ab maiores
-              aliquam totam nesciunt.</p>
+            <p>Ana es una presentadora excepcionalmente alegre y enérgica. Su entusiasmo es contagioso y logra mantener un ambiente positivo en cualquier evento. Su inteligencia y conocimiento profundo sobre diversos temas la convierten en una oradora versátil y cautivadora. Además, su habilidad para transmitir información de manera amena y su capacidad para improvisar la convierten en una figura querida en cualquier evento empresarial.</p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_2.JPG" alt="Natalia Ramírez" class="zoomable-image" />
-            <h3>Natalia Ramírez</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis a blanditiis, et totam explicabo
-              incidunt. Temporibus itaque ipsam, reprehenderit accusantium dolorum eligendi vero fuga dolorem, iure
-              natus at, omnis suscipit!</p>
+            <h3>Natalia Gaviría</h3>
+            <p>Natalia se destaca por su amabilidad y su habilidad para crear un ambiente cálido y acogedor en todos los eventos en los que participa. Su trato cercano y respetuoso hace que los asistentes se sientan valorados y escuchados. Natalia también es una presentadora segura y firme. Su estilo comunicativo claro y estructurado la convierte en una excelente comunicadora, capaz de transmitir información de manera efectiva y comprensible para todos.                                   
+            </p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_3.JPG" alt="Nikool Vanessa Giraldo" class="zoomable-image" />
             <h3>Nikool Vanessa Giraldo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores blanditiis facere sint, impedit
-              voluptatibus natus temporibus nemo ut ex expedita consequatur quibusdam, magni nisi soluta magnam
-              voluptatum! Nisi, possimus sit!</p>
+            <p>Nikool posee una energía única que irradia confianza y carisma en el escenario. Su presencia magnética capta la atención de la audiencia desde el primer momento. Además, su pasión por la temática del evento es palpable, lo que la convierte en una experta en mantener a la audiencia cautivada. Aunque es dinámica y enérgica, Nikool también muestra una habilidad excepcional para escuchar y comprender las perspectivas de los demás, lo que la convierte en una presentadora empática y comprometida.</p>
           </div>
 
           <div class="speaker card card-mobile">
             <img src="Imagenes_innova/Presentadora_4.JPG" alt="Angie Arias Cantor" class="zoomable-image" />
             <h3>Angie Arias Cantor</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime commodi natus corporis labore! Labore
-              illo optio distinctio, temporibus excepturi nobis quidem earum. Tempore architecto quisquam nisi quidem
-              vero unde....</p>
+            <p>Angie se caracteriza por su creatividad y su enfoque innovador en la presentación de contenidos. Siempre está dispuesta a pensar fuera de la caja y a ofrecer perspectivas frescas sobre los temas tratados en el evento. Su habilidad para abordar temas complejos de manera accesible la convierte en una comunicadora efectiva. Aunque es creativa, Angie también demuestra seriedad y profesionalismo en su enfoque, lo que brinda un equilibrio único a su estilo de presentación.
+
+            </p>
           </div>
 
         </div>
